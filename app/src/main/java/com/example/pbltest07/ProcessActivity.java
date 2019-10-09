@@ -12,6 +12,7 @@ public class ProcessActivity extends AppCompatActivity {
 
     private String inputUrl;
     private TextView txtTest;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,5 +36,5 @@ public class ProcessActivity extends AppCompatActivity {
         });
 
     }
-    
+
 }
