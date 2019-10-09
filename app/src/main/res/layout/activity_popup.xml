@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="200dp"
+    android:orientation="vertical"
+    android:layout_centerInParent="true">
+    j
+    <TextView
+        android:id="@+id/txtNotice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:text="의심이 가는 url을 어플로 '공유'하거나 어플에 '직접 작성'하여 판단해보세요!" />
+
+    <CheckBox
+        android:id="@+id/cbRepeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtNotice"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="93dp"
+        android:layout_marginBottom="9dp"
+        android:text="다시 보지 않기" />
+
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtNotice"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="1dp"
+        android:layout_toEndOf="@+id/cbRepeat"
+        android:text="확인" />
+
+
+</RelativeLayout>
