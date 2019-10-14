@@ -23,9 +23,10 @@ public class ResultActivity extends AppCompatActivity {
         txtResult = findViewById(R.id.txtResult);
 
         Intent i = getIntent();
-       // String result = i.getExtras().getString("result");
+        String reason = i.getStringExtra("reason");
+        int percent = i.getIntExtra("percent",0);
 
-      //  txtResult.setText("결과 : "+result + "%");
+        txtResult.setText("이유 : "+reason +"\n"+percent+ "%");
 
         findViewById(R.id.btnBack).setOnClickListener(new View.OnClickListener() {
             @Override

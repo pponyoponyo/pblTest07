@@ -25,14 +25,8 @@ public class Splash extends Activity {
                 //설명 팝업창 띠우기
                 sp = getSharedPreferences("PBL",MODE_PRIVATE);
                 Boolean repeat = sp.getBoolean("popup",true);
-                String id = sp.getString("id",null);
 
-
-               /* if(id == null){
-                    startActivity(new Intent(getBaseContext(),FirstActivity.class));
-                }else{*/
-                    startActivity(new Intent(getBaseContext(),MainActivity.class));
-                //}
+                startActivity(new Intent(getBaseContext(),MainActivity.class));
 
                 if(repeat == true){
                     startActivity(new Intent(getBaseContext(),PopupActivity.class));

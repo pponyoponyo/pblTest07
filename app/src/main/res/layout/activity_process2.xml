@@ -9,11 +9,12 @@
     android:gravity="center"
     android:orientation="vertical">
 
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="CHECKING"
-    android:textSize="40dp"
-    android:textAlignment="center"/>
+    <TextView
+        android:id="@+id/txtProcess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CHECKING2"
+        android:textSize="40dp"
+        android:textAlignment="center"/>
 
 </LinearLayout>
