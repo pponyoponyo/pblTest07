@@ -63,6 +63,7 @@ public class RuleB{
         @Override
         protected Void doInBackground(Void... params) {
             try {
+
                 Document doc = Jsoup.connect(inputUrl).get();
                 htmlData = doc.html(); // html 소스 긁어오기
 
@@ -98,11 +99,50 @@ public class RuleB{
         char [] c ; // null 로 초기화
         c = checkDot.toCharArray(); // 문자열을 char 배열로 설정
 
+        //Length of URL
+        if(c.length>40){
+            percent += 1;
+            reason += "Rule Url > Length of URL\n";
+        }
+
         for(int i=0; i<c.length; i++){
+
+        //Suspicious Strings (“@”,”//”,”?”,”=”,”-“,”_”)
+
+            if(c[i]=='@'){
+                percent += 1;
+                reason += "Rule Url > Suspicious Strings\n";
+            }
+
+            if(c[i]=='?'){
+                percent += 1;
+                reason += "Rule Url > Suspicious Strings\n";
+            }
+
+            if(c[i]=='='){
+                percent += 1;
+                reason += "Rule Url > Suspicious Strings\n";
+            }
+
+            if(c[i]=='-'){
+                percent += 1;
+                reason += "Rule Url > Suspicious Strings\n";
+            }
+
+            if(c[i]=='_'){
+                percent += 1;
+                reason += "Rule Url > Suspicious Strings\n";
+            }
+
+            if(c[i]=='/'&&c[i+1]=='/'){
+                percent += 1;
+                reason += "Rule Url > Suspicious Strings\n";
+            }
+
+            // .. 상위 권한으로 넘어갈 가능성이 있다.
             if(c[i]=='.'&&c[i+1]=='.'){
-                percent += 10;
-                reason += "Rule Url > 상위 권환으로 넘어갈 가능성이 있다.\n";
-                break;
+                percent += 1;
+                reason += "Rule Url > 상위 권한으로 넘어갈 가능성이 있다.\n";
             }
         }
 
@@ -116,7 +156,7 @@ public class RuleB{
         int iframeNum=0,hiddenNum=0, popupNum = 0;
 
         if(htmlSource.contains("exploit.DownloadFromUrl(")){
-            percent += 10;
+            percent += 1;
             reason += "Rule Html > DownloadFromUrl 메소드가 탐지되었습니다.\n";
         }
 
@@ -138,7 +178,7 @@ public class RuleB{
                 String [] checkSmall =  checkMid[j].split(" ");
                 for(int k=0;k<checkSmall.length;k++){
 
-                    if(checkSmall[k].equals("\"hidden\"")){
+                    if(checkSmall[k].equals("hidden")){
                         hiddenNum ++;
                     }
                     if(checkSmall[k].equals("iframe")){
