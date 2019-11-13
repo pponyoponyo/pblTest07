@@ -10,7 +10,7 @@ import org.jsoup.nodes.Document;
 
 import java.io.IOException;
 
-public class RuleB{
+public class ruleChain {
 
     private String inputUrl ="";
     private  String reason = "";
@@ -18,7 +18,7 @@ public class RuleB{
     private Context context;
 
 
-    RuleB(Context context){
+    ruleChain(Context context){
         this.context = context;
     }
 
