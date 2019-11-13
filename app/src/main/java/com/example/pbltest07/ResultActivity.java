@@ -26,7 +26,11 @@ public class ResultActivity extends AppCompatActivity {
         String reason = i.getStringExtra("reason");
         int percent = i.getIntExtra("percent",0);
 
-        txtResult.setText("이유 : "+reason +"\n"+percent+ "%");
+        // 콜렉트 변수 percent 가 기준치 10을 넘어가면
+        if(percent>=10) {
+            txtResult.setText("이유 : " + reason + "\n" + "탐지(10기준):"+percent+"\n"+"악성URL로 판별"+"\n" );
+        }
+
 
         findViewById(R.id.btnBack).setOnClickListener(new View.OnClickListener() {
             @Override
