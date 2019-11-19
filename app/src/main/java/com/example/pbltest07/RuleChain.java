@@ -95,7 +95,9 @@ public class RuleChain {
         }
     }
 
+    //
     private void ruleUrl(String urlSource){
+
         String checkDot = urlSource;
 
         char [] c ; // null 로 초기화
@@ -188,10 +190,13 @@ public class RuleChain {
             reason += "Rule Url > Length of Document\n";
         }
 
-        // Number of lines
-        String [] checklines=htmlSource.split("<br>");
+        // Number of lines <br> tag
+        String [] checklines=htmlSource.split("<");
         for (int j=0; j<checklines.length;j++){
-            lineNum++;
+            if(checklines[j].contains("br>")){
+                lineNum++;
+            }
+
 
             //Number of words
             String [] checkwords=checklines[j].split(" ");
@@ -200,12 +205,6 @@ public class RuleChain {
             }
 
         }
-
-
-
-
-
-
 
 
         // exploit() 존재
@@ -220,7 +219,6 @@ public class RuleChain {
 
             if(checkBig[i].contains("script")){
                 String [] checkScript = checkBig[i].split(";");
-
 
                 for(int j=0;j<checkScript.length;j++){
                     // window.open() 존재
