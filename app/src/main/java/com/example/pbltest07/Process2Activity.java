@@ -23,6 +23,8 @@ public class Process2Activity extends AppCompatActivity {
         RuleChain ruleChain = new RuleChain(this);
         ruleChain.totalCheck(inputUrl);
 
+        RuleBase ruleBase = new RuleBase(this);
+
         finish();
     }
 }

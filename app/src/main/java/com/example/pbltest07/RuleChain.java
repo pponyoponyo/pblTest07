@@ -17,7 +17,6 @@ public class RuleChain {
     public int percent = 0; // collect 변수 역할
     private Context context;
 
-
     RuleChain(Context context){
         this.context = context;
     }
@@ -30,8 +29,8 @@ public class RuleChain {
         jsoupHttp.execute();
 
     }
-
     private void checkInput(String urlData) {
+
 
         //만약 문자가 공유 되었을 때 방안
         if(urlData.contains(" ")){
@@ -326,7 +325,6 @@ public class RuleChain {
         }
 
      }
-
 
     }
 
