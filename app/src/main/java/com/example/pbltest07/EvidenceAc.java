@@ -1,17 +1,15 @@
 package com.example.pbltest07;
-
-
 import android.content.Context;
 
 import com.example.pbltest07.RuleSet.BackSlash;
 
-public class RuleBase {
+public class EvidenceAc {
 
     private String temp = "1dsdfdsfd/dsfds";
     private int total = 0;
     private int trueNum = 0;
 
-    RuleBase(){
+    EvidenceAc(){
         if(BackSlash.rule(temp)){
             trueNum++;
         }

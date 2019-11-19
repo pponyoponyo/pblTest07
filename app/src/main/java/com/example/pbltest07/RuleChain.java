@@ -94,7 +94,7 @@ public class RuleChain {
         }
     }
 
-    //
+
     private void ruleUrl(String urlSource){
 
         String checkDot = urlSource;
