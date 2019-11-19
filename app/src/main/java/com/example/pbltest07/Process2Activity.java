@@ -20,7 +20,7 @@ public class Process2Activity extends AppCompatActivity {
         Intent i = getIntent();
         inputUrl = i.getExtras().getString("url");
 
-        ruleChain ruleChain = new ruleChain(this);
+        RuleChain ruleChain = new RuleChain(this);
         ruleChain.totalCheck(inputUrl);
 
         finish();
