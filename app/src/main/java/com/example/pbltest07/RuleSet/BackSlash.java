@@ -7,7 +7,7 @@ public class BackSlash {
         c = url.toCharArray();
 
         for(int i=0; i<c.length; i++){
-            if(c[i]=='/'){
+            if(c[i]=='\\'){
                 return true;
             }
         }
