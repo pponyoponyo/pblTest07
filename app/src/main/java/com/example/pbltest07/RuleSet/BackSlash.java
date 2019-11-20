@@ -2,7 +2,7 @@ package com.example.pbltest07.RuleSet;
 
 public class BackSlash {
 
-    static public Boolean rule(String url){
+    static public boolean rule(String url){
         char [] c ;
         c = url.toCharArray();
 

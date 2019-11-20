@@ -13,7 +13,7 @@ import java.io.IOException;
 public class RuleChain {
 
     private String inputUrl ="";
-    private  String reason = "";
+    private String reason = "";
     public int percent = 0; // collect 변수 역할
     private Context context;
 
@@ -325,6 +325,10 @@ public class RuleChain {
         }
 
      }
+
+
+
+
 
     }
 
