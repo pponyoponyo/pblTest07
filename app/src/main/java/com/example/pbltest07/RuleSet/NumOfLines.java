@@ -1,4 +1,4 @@
 package com.example.pbltest07.RuleSet;
 
-public class RuleDot {
+public class NumOfLines {
 }

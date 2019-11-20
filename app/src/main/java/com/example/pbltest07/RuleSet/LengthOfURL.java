@@ -1,4 +1,6 @@
 package com.example.pbltest07.RuleSet;
 
-public class RuleNumOfWords {
+public class LengthOfURL {
+
+
 }

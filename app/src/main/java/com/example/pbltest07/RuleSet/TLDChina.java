@@ -1,6 +1,6 @@
 package com.example.pbltest07.RuleSet;
 
-public class TLDChina extends RuleTLD {
+public class TLDChina extends TLD {
 
     public void findTLD(){
         //오버라이딩
