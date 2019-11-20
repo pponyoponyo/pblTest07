@@ -2,11 +2,11 @@ package com.example.pbltest07.RuleSet;
 
 public class TLDRussia extends TLD {
 
-    public void findTLD(){
+    static public boolean findTLD(){
         //오버라이딩
         if(url.contains(".ru")){
-            result+="Rule Url > Url from Russia";
+            return true;
         }
-
+        return false;
     }
 }
