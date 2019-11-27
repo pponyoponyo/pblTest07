@@ -191,6 +191,7 @@ public class RuleChain {
 
         // Number of lines <br> tag
         String [] checklines=htmlSource.split("<");
+
         for (int j=0; j<checklines.length;j++){
             if(checklines[j].contains("br>")){
                 lineNum++;

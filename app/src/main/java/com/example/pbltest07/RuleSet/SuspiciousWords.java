@@ -10,10 +10,10 @@ import java.io.IOException;
 public class SuspiciousWords {
     //여기가 '택배'단어 들어가는 클래스임
 
-    static private String html;
+    static private String url;
     static private String input;
 
-    static public boolean rule(final String url){
+    static public boolean rule(final String html){
 
         input = url;
 
@@ -52,7 +52,7 @@ public class SuspiciousWords {
             if(htmlData.equals("")){
                 return;
             }else{
-                html = htmlData;
+                url = htmlData;
             }
         }
     }

@@ -1,6 +1,7 @@
 package com.example.pbltest07.RuleSet;
 
 public class Dot {
+
     static public Boolean rule(String url){
         char [] c ;
         c = url.toCharArray();
