@@ -1,20 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="로딩화면!"
-        android:textAlignment="center"
-        android:textSize="50dp"
-        />
+
+    <ImageView
+        android:layout_width="242dp"
+        android:layout_height="100dp"
+        android:src="@drawable/nig" />
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/sample"/>
+        android:layout_height="178dp"
+        android:src="@drawable/loading" />
+
+
+    <TextView
+        android:layout_width="201dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="100dp"
+        android:fontFamily="@font/tdack"
+        android:text="Check The Url"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="35sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="129dp"
+        android:layout_marginTop="22dp"
+        android:text="Sorry, please wait a minute"
+        android:fontFamily="@font/tdack"
+        android:textColor="@color/colorPrimaryDark"
+        android:textAlignment="center"
+        android:textSize="40sp" />
 
 </LinearLayout>
