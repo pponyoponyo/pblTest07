@@ -1,10 +1,19 @@
 package com.example.pbltest07.RuleSet;
 
-import com.example.pbltest07.Rule;
+import com.example.pbltest07.RuleBase;
 
-public class Bitly extends Rule {
+public class Bitly extends RuleBase {
 
     private String url;
+    private boolean hypothesis = false;
+
+    public boolean isHypothesis() {
+        return hypothesis;
+    }
+
+    public void setHypothesis(boolean hypothesis) {
+        this.hypothesis = hypothesis;
+    }
 
     public Bitly(String url) {
         super(url);
@@ -12,10 +21,9 @@ public class Bitly extends Rule {
     }
 
     // 여기는 단축 url 관련 클래스임
-    public boolean rule(){
+    public void rule(){
         if(url.contains("bit.ly")){
-           return true;
+           setHypothesis(true);
         }
-        return false;
     }
 }

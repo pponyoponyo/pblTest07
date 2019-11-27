@@ -1,17 +1,18 @@
 package com.example.pbltest07.RuleSet;
 
-import com.example.pbltest07.Rule;
+import com.example.pbltest07.RuleBase;
 
-public class LengthOfURL extends Rule {
+public class LengthOfURL extends RuleBase {
 
     private String url;
+    private boolean hypothesis = false;
 
     public LengthOfURL(String url) {
         super(url);
         this.url = url;
     }
 
-    public boolean rule(){
+    public void rule(){
 
         String checkDot = url;
         char [] c ; // null 로 초기화
@@ -19,8 +20,15 @@ public class LengthOfURL extends Rule {
 
         //Length of URL
         if(c.length>40){
-          return true;
+            setHypothesis(true);
         }
-        return false;
+    }
+
+    public boolean isHypothesis() {
+        return hypothesis;
+    }
+
+    public void setHypothesis(boolean hypothesis) {
+        this.hypothesis = hypothesis;
     }
 }

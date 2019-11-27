@@ -9,6 +9,7 @@ import com.example.pbltest07.RuleSet.LengthOfURL;
 import com.example.pbltest07.RuleSet.NumOfLines;
 import com.example.pbltest07.RuleSet.SuspiciousWords;
 import com.example.pbltest07.RuleSet.TLD;
+import com.example.pbltest07.RuleSet.UrlKorean;
 import com.example.pbltest07.RuleSet.WindowOpenMethod;
 
 public class EvidenceAc {
@@ -29,7 +30,13 @@ public class EvidenceAc {
         SuspiciousWords suspiciousWords = new SuspiciousWords(url);
         TLD tld = new TLD(url);
         WindowOpenMethod windowOpenMethod = new WindowOpenMethod(url);
+        UrlKorean urlKorean = new UrlKorean(url);
 
+        if(backSlash.isHypothesis()){
+
+        }
+
+        /*
         if(backSlash.rule()){
             trueNum++;
         }
@@ -49,7 +56,7 @@ public class EvidenceAc {
             // 권한 및 경로 탈취 url
             trueNum++;
         }
-        count();
+        count();*/
 
         result();
     }
