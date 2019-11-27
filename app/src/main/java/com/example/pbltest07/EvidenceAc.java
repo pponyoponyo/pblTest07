@@ -3,8 +3,13 @@ package com.example.pbltest07;
 import com.example.pbltest07.RuleSet.BackSlash;
 import com.example.pbltest07.RuleSet.Bitly;
 import com.example.pbltest07.RuleSet.Dot;
+import com.example.pbltest07.RuleSet.EvalMethod;
+import com.example.pbltest07.RuleSet.LengthOfDoc;
+import com.example.pbltest07.RuleSet.LengthOfURL;
+import com.example.pbltest07.RuleSet.NumOfLines;
 import com.example.pbltest07.RuleSet.SuspiciousWords;
 import com.example.pbltest07.RuleSet.TLD;
+import com.example.pbltest07.RuleSet.WindowOpenMethod;
 
 public class EvidenceAc {
 
@@ -13,12 +18,17 @@ public class EvidenceAc {
     private int trueNum = 0;
     private float resultN = 0;
 
-    EvidenceAc(){
+    public void EvidenceAc(){
         BackSlash backSlash = new BackSlash(url);
         Bitly bitly = new Bitly(url);
+        Dot dot=new Dot(url);
+        EvalMethod evalMethod = new EvalMethod(url);
+        LengthOfDoc lengthOfDoc = new LengthOfDoc(url);
+        LengthOfURL lengthOfURL = new LengthOfURL(url);
+        NumOfLines numOfLines = new NumOfLines(url);
         SuspiciousWords suspiciousWords = new SuspiciousWords(url);
         TLD tld = new TLD(url);
-        Dot dot=new Dot(url);
+        WindowOpenMethod windowOpenMethod = new WindowOpenMethod(url);
 
         if(backSlash.rule()){
             trueNum++;
@@ -40,8 +50,6 @@ public class EvidenceAc {
             trueNum++;
         }
         count();
-
-
 
         result();
     }

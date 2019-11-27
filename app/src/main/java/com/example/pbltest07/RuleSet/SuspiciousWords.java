@@ -17,6 +17,11 @@ public class SuspiciousWords extends Rule {
         if(html.contains("택배")){
             return true;
         }
+
+        if(html.contains("도박")){
+            return true;
+        }
+
         return false;
     }
 }
