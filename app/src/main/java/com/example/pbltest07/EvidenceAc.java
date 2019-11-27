@@ -18,6 +18,7 @@ public class EvidenceAc {
         Bitly bitly = new Bitly(url);
         SuspiciousWords suspiciousWords = new SuspiciousWords(url);
         TLD tld = new TLD(url);
+        Dot dot=new Dot(url);
 
         if(backSlash.rule()){
             trueNum++;
@@ -31,7 +32,17 @@ public class EvidenceAc {
 
         if(bitly.rule() && suspiciousWords.rule()){
             //TODO 다른 작업?
+            trueNum++;
         }
+        count();
+
+        if(backSlash.rule()&& dot.rule()){
+            // 권한 및 경로 탈취 url
+            trueNum++;
+        }
+        count();
+
+
 
         result();
     }
