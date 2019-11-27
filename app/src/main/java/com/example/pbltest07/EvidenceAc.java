@@ -42,6 +42,10 @@ public class EvidenceAc {
             }
         }
 
+        if(tld.isCn_hypothesis()||tld.isRu_hypothesis()){
+            // 러시아와 중국에 위치한 TLD
+        }
+
         /*
         if(backSlash.rule()){
             trueNum++;
