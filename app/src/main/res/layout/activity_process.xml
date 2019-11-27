@@ -14,6 +14,8 @@
     android:layout_height="wrap_content"
     android:text="CHECKING"
     android:textSize="40dp"
+    android:fontFamily="@font/kcc"
+    android:textColor="@color/colorPrimaryDark"
     android:textAlignment="center"/>
 
 </LinearLayout>

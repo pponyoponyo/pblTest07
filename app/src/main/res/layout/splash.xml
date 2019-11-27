@@ -2,32 +2,33 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:background="@drawable/back"
+    android:layout_gravity="center"
     android:orientation="vertical">
 
 
     <TextView
-        android:layout_width="201dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
         android:layout_marginStart="100dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="100dp"
-        android:fontFamily="@font/tdack"
+        android:fontFamily="@font/kcc"
+        android:gravity="center"
         android:text="Check The Url"
-        android:textAlignment="center"
-        android:textColor="@color/colorWhite"
-        android:textSize="35sp" />
+        android:textColor="@color/colorBlack"
+        android:textSize="30dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="129dp"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
         android:layout_marginTop="22dp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/kcc"
+        android:gravity="center"
         android:text="Sorry, please wait a minute"
-        android:fontFamily="@font/tdack"
-        android:textColor="@color/colorWhite"
         android:textAlignment="center"
-        android:textSize="40sp" />
+        android:textColor="@color/colorBlack"
+        android:textSize="30dp" />
 
 </LinearLayout>

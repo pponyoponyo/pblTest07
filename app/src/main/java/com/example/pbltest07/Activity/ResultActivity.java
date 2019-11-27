@@ -22,7 +22,7 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        txtResult = findViewById(R.id.txtResult);
+        txtResult = findViewById(R.id.txtResult1);
 
         Intent i = getIntent();
         String reason = i.getStringExtra("reason");
