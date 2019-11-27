@@ -1,8 +1,17 @@
 package com.example.pbltest07.RuleSet;
 
-public class LengthOfURL {
+import com.example.pbltest07.Rule;
 
-    static public Boolean rule(String url){
+public class LengthOfURL extends Rule {
+
+    private String url;
+
+    public LengthOfURL(String url) {
+        super(url);
+        this.url = url;
+    }
+
+    public boolean rule(){
 
         String checkDot = url;
         char [] c ; // null 로 초기화

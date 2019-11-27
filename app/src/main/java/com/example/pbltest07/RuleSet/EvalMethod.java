@@ -1,13 +1,6 @@
 package com.example.pbltest07.RuleSet;
 
-import android.os.AsyncTask;
-
 import com.example.pbltest07.Rule;
-
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-
-import java.io.IOException;
 
 public class EvalMethod extends Rule {
 

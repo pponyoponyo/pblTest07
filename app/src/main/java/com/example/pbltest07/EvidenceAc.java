@@ -31,7 +31,6 @@ public class EvidenceAc {
         count();
 
         if(bitly.rule() && suspiciousWords.rule()){
-            //TODO 다른 작업?
             trueNum++;
         }
         count();
