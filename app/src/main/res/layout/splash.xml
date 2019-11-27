@@ -3,18 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:background="@drawable/back"
     android:orientation="vertical">
-
-
-    <ImageView
-        android:layout_width="242dp"
-        android:layout_height="100dp"
-        android:src="@drawable/nig" />
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="178dp"
-        android:src="@drawable/loading" />
 
 
     <TextView
@@ -27,7 +17,7 @@
         android:fontFamily="@font/tdack"
         android:text="Check The Url"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorWhite"
         android:textSize="35sp" />
 
     <TextView
@@ -36,7 +26,7 @@
         android:layout_marginTop="22dp"
         android:text="Sorry, please wait a minute"
         android:fontFamily="@font/tdack"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorWhite"
         android:textAlignment="center"
         android:textSize="40sp" />
 
