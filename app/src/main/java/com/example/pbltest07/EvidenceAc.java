@@ -1,5 +1,8 @@
 package com.example.pbltest07;
 
+import android.content.Context;
+import android.widget.Toast;
+
 import com.example.pbltest07.RuleSet.BackSlash;
 import com.example.pbltest07.RuleSet.Bitly;
 import com.example.pbltest07.RuleSet.Dot;
@@ -18,6 +21,7 @@ public class EvidenceAc {
     private int total = 0;
     private int trueNum = 0;
     private float resultN = 0;
+    private Context context;
 
     public void EvidenceAc(){
         BackSlash backSlash = new BackSlash(url);
@@ -32,8 +36,10 @@ public class EvidenceAc {
         WindowOpenMethod windowOpenMethod = new WindowOpenMethod(url);
         UrlKorean urlKorean = new UrlKorean(url);
 
-        if(backSlash.isHypothesis()){
-
+        if(backSlash.isHypothesis() && lengthOfURL.isHypothesis()){
+            if(dot.isHypothesis()){
+                //상위 권한 탈취 가능성
+            }
         }
 
         /*
@@ -68,5 +74,4 @@ public class EvidenceAc {
     private void result(){
         resultN = total/trueNum;
     }
-
 }

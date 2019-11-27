@@ -10,7 +10,7 @@ import java.io.IOException;
 public class RuleBase {
 
     private String url;
-    private String html ="";
+    private String html;
 
     public RuleBase(String url){
         this.url = url;
