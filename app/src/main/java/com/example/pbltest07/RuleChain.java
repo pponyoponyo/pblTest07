@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
+import com.example.pbltest07.Activity.ResultActivity;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
@@ -25,8 +27,6 @@ public class RuleChain {
 
         checkInput(urlData);
 
-        JsoupAsyncTask jsoupHttp = new JsoupAsyncTask();
-        jsoupHttp.execute();
 
     }
     private void checkInput(String urlData) {
@@ -52,47 +52,6 @@ public class RuleChain {
         }
     }
 
-    private class JsoupAsyncTask extends AsyncTask<Void, Void, Void> {
-        private String htmlData = "";
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-        }
-
-        @Override
-        protected Void doInBackground(Void... params) {
-            try {
-
-                Document doc = Jsoup.connect(inputUrl).get();
-                htmlData = doc.html(); // html 소스 긁어오기
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void result) {
-
-            if(htmlData.equals("")){
-                reason = "오류 :"+inputUrl;
-            }else{
-                ruleUrl(inputUrl); // url 주소 자체로 판별
-                ruleHtml(htmlData); // url 웹크롤링 데이터 판별 javascript 포함
-                ruleChain1(inputUrl,htmlData); // url 주소 특징 & 웹크롤 데이터 판별 특징
-        }
-
-            Bundle data = new Bundle();
-            data.putString("reason",reason);
-            data.putInt("percent",percent);
-
-            Intent intent = new Intent(context,ResultActivity.class);
-            intent.putExtras(data);
-            context.startActivity(intent);
-        }
-    }
 
 
     private void ruleUrl(String urlSource){

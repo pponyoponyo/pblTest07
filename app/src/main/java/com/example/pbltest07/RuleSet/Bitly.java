@@ -1,14 +1,20 @@
 package com.example.pbltest07.RuleSet;
 
-public class Bitly {
+import com.example.pbltest07.Rule;
 
-// 여기는 단축 url 관련 클래스임
-    static public boolean rule(String url){
+public class Bitly extends Rule {
 
+    private String url;
+
+    public Bitly(String url) {
+        super(url);
+        this.url = url;
+    }
+
+    // 여기는 단축 url 관련 클래스임
+    public boolean rule(){
         if(url.contains("bit.ly")){
-           if(SuspiciousWords.rule(url)){
-               return true;
-           }
+           return true;
         }
         return false;
     }

@@ -1,8 +1,17 @@
 package com.example.pbltest07.RuleSet;
 
-public class Dot {
+import com.example.pbltest07.Rule;
 
-    static public Boolean rule(String url){
+public class Dot extends Rule {
+
+    private String url;
+
+    public Dot(String url) {
+        super(url);
+        this.url = url;
+    }
+
+    public boolean rule(){
         char [] c ;
         c = url.toCharArray();
 

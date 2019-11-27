@@ -13,19 +13,19 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Process2Activity" />
         <activity android:name=".ProcessActivity" />
-        <activity android:name=".Splash">
+        <activity android:name=".Activity.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ResultActivity" />
+        <activity android:name=".Activity.ResultActivity" />
         <activity
-            android:name=".PopupActivity"
+            android:name=".Activity.PopupActivity"
             android:label="NOTICE"
             android:theme="@android:style/Theme.Dialog" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
 
@@ -35,5 +35,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

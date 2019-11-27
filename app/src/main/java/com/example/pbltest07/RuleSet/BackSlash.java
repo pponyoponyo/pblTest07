@@ -1,8 +1,17 @@
 package com.example.pbltest07.RuleSet;
 
-public class BackSlash {
+import com.example.pbltest07.Rule;
 
-    static public boolean rule(String url){
+public class BackSlash extends Rule {
+
+    String url;
+
+    public BackSlash(String url) {
+        super(url);
+        this.url = url;
+    }
+
+    public boolean rule(){
         char [] c ;
         c = url.toCharArray();
 

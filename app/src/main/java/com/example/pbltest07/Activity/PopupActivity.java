@@ -1,4 +1,4 @@
-package com.example.pbltest07;
+package com.example.pbltest07.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+
+import com.example.pbltest07.R;
 
 public class PopupActivity extends Activity {
 

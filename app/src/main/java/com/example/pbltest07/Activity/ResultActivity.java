@@ -1,4 +1,4 @@
-package com.example.pbltest07;
+package com.example.pbltest07.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.pbltest07.R;
 
 public class ResultActivity extends AppCompatActivity {
 

@@ -1,10 +1,12 @@
-package com.example.pbltest07;
+package com.example.pbltest07.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.example.pbltest07.R;
 
 public class Splash extends Activity {
 
@@ -26,10 +28,10 @@ public class Splash extends Activity {
                 sp = getSharedPreferences("PBL",MODE_PRIVATE);
                 Boolean repeat = sp.getBoolean("popup",true);
 
-                startActivity(new Intent(getBaseContext(),MainActivity.class));
+                startActivity(new Intent(getBaseContext(), MainActivity.class));
 
                 if(repeat == true){
-                    startActivity(new Intent(getBaseContext(),PopupActivity.class));
+                    startActivity(new Intent(getBaseContext(), PopupActivity.class));
                 }
 
                 finish();

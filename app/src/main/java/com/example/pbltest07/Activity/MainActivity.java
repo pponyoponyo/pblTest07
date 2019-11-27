@@ -1,4 +1,4 @@
-package com.example.pbltest07;
+package com.example.pbltest07.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.pbltest07.ProcessActivity;
+import com.example.pbltest07.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -59,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendUrl(){
-        Intent i = new Intent(getBaseContext(),ProcessActivity.class);
+        Intent i = new Intent(getBaseContext(), ProcessActivity.class);
         i.putExtra("url",inputUrl);
         startActivity(i);
     }
