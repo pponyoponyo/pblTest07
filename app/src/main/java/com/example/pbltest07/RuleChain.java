@@ -64,7 +64,7 @@ public class RuleChain {
         //Length of URL
         if(c.length>40){
             percent += 1;
-            reason += "Rule Url > Length of URL\n";
+            reason += "RuleBase Url > Length of URL\n";
         }
 
         for(int i=0; i<c.length; i++){
@@ -73,45 +73,45 @@ public class RuleChain {
 
             if(c[i]=='@'){
                 percent += 1;
-                reason += "Rule Url > Suspicious Strings\n";
+                reason += "RuleBase Url > Suspicious Strings\n";
             }
 
             if(c[i]=='?'){
                 percent += 1;
-                reason += "Rule Url > Suspicious Strings\n";
+                reason += "RuleBase Url > Suspicious Strings\n";
             }
 
             if(c[i]=='='){
                 percent += 1;
-                reason += "Rule Url > Suspicious Strings\n";
+                reason += "RuleBase Url > Suspicious Strings\n";
             }
 
             if(c[i]=='-'){
                 percent += 1;
-                reason += "Rule Url > Suspicious Strings\n";
+                reason += "RuleBase Url > Suspicious Strings\n";
             }
 
             if(c[i]=='_'){
                 percent += 1;
-                reason += "Rule Url > Suspicious Strings\n";
+                reason += "RuleBase Url > Suspicious Strings\n";
             }
 
 
             if(c[i]=='/'&&c[i+1]=='/'){
                 percent += 1;
-                reason += "Rule Url > Suspicious Strings\n";
+                reason += "RuleBase Url > Suspicious Strings\n";
             }
 
             // .. 상위 권한으로 넘어갈 가능성 ( . 개수)
             if(c[i]=='.'&&c[i+1]=='.'){
                 percent += 1;
-                reason += "Rule Url > 상위 권한으로 넘어갈 가능성이 있다.\n";
+                reason += "RuleBase Url > 상위 권한으로 넘어갈 가능성이 있다.\n";
             }
 
             // Number of "\"
             if(c[i]=='\\'){
                 percent += 1;
-                reason += "Rule Url > Detection of \\ \n";
+                reason += "RuleBase Url > Detection of \\ \n";
             }
 
         }
@@ -119,13 +119,13 @@ public class RuleChain {
             // Number of TLD and out of TLD position (China)
             if(urlSource.contains(".cn")){
                 percent +=10;
-                reason+="Rule Url > Url from China\n";
+                reason+="RuleBase Url > Url from China\n";
             }
 
             // Number of TLD and out of TLD position (Russia)
             if(urlSource.contains(".ru")){
                 percent +=10;
-                reason+="Rule Url > Url from Russia\n";
+                reason+="RuleBase Url > Url from Russia\n";
             }
 
 
@@ -145,7 +145,7 @@ public class RuleChain {
         // Document length
         if(d.length>100){ // 100은 임의 값
             percent += 1;
-            reason += "Rule Url > Length of Document\n";
+            reason += "RuleBase Url > Length of Document\n";
         }
 
         // Number of lines <br> tag
@@ -169,7 +169,7 @@ public class RuleChain {
         // exploit() 존재
         if(htmlSource.contains("exploit.DownloadFromUrl(")){
             percent += 1;
-            reason += "Rule Html > DownloadFromUrl 메소드가 탐지되었습니다.\n";
+            reason += "RuleBase Html > DownloadFromUrl 메소드가 탐지되었습니다.\n";
         }
 
        // *다시 코드 수정해야 할 듯 *
@@ -188,31 +188,31 @@ public class RuleChain {
                     // eval() 존재
                     if( checkScript[j].contains("eval")){
                         percent +=1;
-                        reason+="Rule Html > eval() 메소드가 탐지되었습니다.\n";
+                        reason+="RuleBase Html > eval() 메소드가 탐지되었습니다.\n";
                     }
 
                     // escape() 존재
                     if( checkScript[j].contains("escape")){
                         percent +=1;
-                        reason+="Rule Html > escape() 메소드가 탐지되었습니다.\n";
+                        reason+="RuleBase Html > escape() 메소드가 탐지되었습니다.\n";
                     }
 
                     // charCodeAt() 존재
                     if( checkScript[j].contains("charCodeAt")){
                         percent +=1;
-                        reason+="Rule Html > charCodeAt() 메소드가 탐지되었습니다.\n";
+                        reason+="RuleBase Html > charCodeAt() 메소드가 탐지되었습니다.\n";
                     }
 
                     // fromCharCode() 존재
                     if( checkScript[j].contains("fromCharCode")){
                         percent +=1;
-                        reason+="Rule Html > fromCharCode() 메소드가 탐지되었습니다.\n";
+                        reason+="RuleBase Html > fromCharCode() 메소드가 탐지되었습니다.\n";
                     }
 
                     // parseInt() 존재
                     if( checkScript[j].contains("parseInt")){
                         percent +=1;
-                        reason+="Rule Html > parseInt() 메소드가 탐지되었습니다.\n";
+                        reason+="RuleBase Html > parseInt() 메소드가 탐지되었습니다.\n";
                     }
 
                 }
@@ -243,33 +243,33 @@ public class RuleChain {
 
         if(iframeNum >=1){
             percent += 1;
-            reason += "Rule Html > iframe 개수가 " + iframeNum + "개 탐지되었습니다.\n";
+            reason += "RuleBase Html > iframe 개수가 " + iframeNum + "개 탐지되었습니다.\n";
         }
 
         if(hiddenNum >=1){
             percent += 1;
-            reason += "Rule Html > hidden tag의 개수가 " + hiddenNum + "개 탐지되었습니다.\n";
+            reason += "RuleBase Html > hidden tag의 개수가 " + hiddenNum + "개 탐지되었습니다.\n";
         }
 
         if(popupNum >=1){
             percent += 1;
-            reason += "Rule Html > popup 함수의 개수가 " + popupNum + "개 탐지되었습니다.\n";
+            reason += "RuleBase Html > popup 함수의 개수가 " + popupNum + "개 탐지되었습니다.\n";
         }
 
         if(aNum >=1){
             percent += 1;
-            reason += "Rule Html > <a> tag의 개수가 " + aNum + "개 탐지되었습니다.\n";
+            reason += "RuleBase Html > <a> tag의 개수가 " + aNum + "개 탐지되었습니다.\n";
         }
 
         if(lineNum>=1){
             percent += 1;
-            reason += "Rule Html > Document line 개수가 " + lineNum + "개 탐지되었습니다.\n";
+            reason += "RuleBase Html > Document line 개수가 " + lineNum + "개 탐지되었습니다.\n";
         }
 
 
         if(wordNum>=1){
             percent += 1;
-            reason += "Rule Html > word 개수가 한 줄에  " + wordNum + "개 탐지되었습니다.\n";
+            reason += "RuleBase Html > word 개수가 한 줄에  " + wordNum + "개 탐지되었습니다.\n";
         }
 
 

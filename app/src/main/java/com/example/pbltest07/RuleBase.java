@@ -7,17 +7,17 @@ import org.jsoup.nodes.Document;
 
 import java.io.IOException;
 
-public class Rule {
+public class RuleBase {
 
     private String url;
-    private String html ="";
+    private String html;
 
-    public Rule(String url){
+    public RuleBase(String url){
         this.url = url;
     }
 
-    public boolean rule(){
-        return false;
+    public void rule(){
+
     }
 
     public String getHtml(){

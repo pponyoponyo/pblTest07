@@ -1,22 +1,34 @@
 package com.example.pbltest07.RuleSet;
 
-import com.example.pbltest07.Rule;
+import com.example.pbltest07.RuleBase;
 
-public class SuspiciousWords extends Rule {
+public class SuspiciousWords extends RuleBase {
     //여기가 '택배'단어 들어가는 클래스임
 
-    String html;
+    private String html;
+    private boolean hypothesis = false;
 
     public SuspiciousWords(String url) {
         super(url);
         html = getHtml();
     }
 
-    public boolean rule(){
+    public void rule(){
 
         if(html.contains("택배")){
-            return true;
+            setHypothesis(true);
         }
-        return false;
+
+        if(html.contains("도박")){
+            setHypothesis(true);
+        }
+    }
+
+    public boolean isHypothesis() {
+        return hypothesis;
+    }
+
+    public void setHypothesis(boolean hypothesis) {
+        this.hypothesis = hypothesis;
     }
 }

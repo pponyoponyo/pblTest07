@@ -1,17 +1,18 @@
 package com.example.pbltest07.RuleSet;
 
-import com.example.pbltest07.Rule;
+import com.example.pbltest07.RuleBase;
 
-public class NumOfLines extends Rule {
+public class NumOfLines extends RuleBase {
 
     private String html;
+    private boolean hypothesis = false;
 
     public NumOfLines(String url) {
         super(url);
         html = getHtml();
     }
 
-    public boolean rule() {
+    public void rule() {
 
         int brNum = 0;
 
@@ -24,8 +25,15 @@ public class NumOfLines extends Rule {
         }
 
         if(brNum>10){ // br 태그가 카운팅 된 경우 return true 한다!
-            return true;
+            setHypothesis(true);
         }
-        return false;
+    }
+
+    public boolean isHypothesis() {
+        return hypothesis;
+    }
+
+    public void setHypothesis(boolean hypothesis) {
+        this.hypothesis = hypothesis;
     }
 }

@@ -1,10 +1,12 @@
 package com.example.pbltest07.RuleSet;
 
-import com.example.pbltest07.Rule;
+import com.example.pbltest07.RuleBase;
 
-public class TLD extends Rule {
+public class TLD extends RuleBase {
 
     private String url;
+    private boolean cn_hypothesis = false;
+    private boolean ru_hypothesis = false;
 
     public TLD(String url) {
         super(url);
@@ -12,16 +14,30 @@ public class TLD extends Rule {
     }
 
     @Override
-    public boolean rule() {
+    public void rule() {
 
         if(url.contains(".cn")){
-            return true;
+            setCn_hypothesis(true);
         }
 
         if(url.contains(".ru")){
-            return true;
+            setRu_hypothesis(true);
         }
+    }
 
-        return false;
+    public boolean isCn_hypothesis() {
+        return cn_hypothesis;
+    }
+
+    public void setCn_hypothesis(boolean cn_hypothesis) {
+        this.cn_hypothesis = cn_hypothesis;
+    }
+
+    public boolean isRu_hypothesis() {
+        return ru_hypothesis;
+    }
+
+    public void setRu_hypothesis(boolean ru_hypothesis) {
+        this.ru_hypothesis = ru_hypothesis;
     }
 }
